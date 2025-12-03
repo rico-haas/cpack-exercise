@@ -20,3 +20,15 @@ target_link_libraries(cpackexamplelib Boost::filesystem ${YAML_CPP_LIBRARIES})
 
 DEAL_II_SETUP_TARGET("${PROJECT_NAME}")
 DEAL_II_SETUP_TARGET(cpackexamplelib)
+
+install(TARGETS "${PROJECT_NAME}" cpackexamplelib
+  RUNTIME DESTINATION bin
+  LIBRARY DESTINATION lib
+)
+
+file(GLOB_RECURSE PROJECT_HEADERS "${CMAKE_SOURCE_DIR}/*.hpp")
+
+install(
+  FILES ${PROJECT_HEADERS}
+  DESTINATION include/cpackexamplelib
+)
