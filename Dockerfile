@@ -1,4 +1,4 @@
-From ubuntu:24.04
+FROM ubuntu:24.04
 
 # Install a few dependencies
 RUN apt-get -qq update && \
@@ -20,4 +20,8 @@ ENV LIBRARY_PATH $LIBRARY_PATH:/usr/local/lib/
 ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/usr/local/lib/
 ENV PATH $PATH:/usr/local/bin/
 
-CMD ["/bin/bash"]
+CMD mkdir /mnt/build && cd /mnt/build && \
+    cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ../cpack-exercise/ && \
+    make package && \
+    mv cpackexample*.tar.gz ../cpack-exercise/ && \
+    mv cpackexample*.deb ../cpack-exercise/
