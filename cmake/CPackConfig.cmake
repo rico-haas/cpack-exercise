@@ -1,0 +1,20 @@
+set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
+set(CPACK_PACKAGE_VENDOR "Rico Haas")
+set(CPACK_PACKAGE_CONTACT "st155588@stud.uni-stuttgart.de")
+set(CPACK_PACKAGE_MAINTAINERS "Rico Haas ${CPACK_PACKAGE_CONTACT}")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Exercise project for CPack"
+CACHE STRING "In this SSE exercise, we create tar.gz and deb packages using CPack")
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/Simulation-Software-Engineering/cpack-exercise-wt2526")
+set(CPACK_PACKAGE_VERSION_MAJOR 0)
+set(CPACK_PACKAGE_VERSION_MINOR 1)
+set(CPACK_PACKAGE_VERSION_PATCH 0)
+set(CPACK_GENERATOR "TGZ;DEB")
+set(CPACK_STRIP_FILES TRUE)
+
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Rico Haas <st155588@stud.uni-stuttgart.de>")
+set(CPACK_DEBIAN_PACKAGE_DESCRIPTION "In this SSE exercise, we create tar.gz and deb packages using CPack")
+set(CPACK_DEBIAN_PACKAGE_VERSION "0.1.0")
+set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+
+include(CPack)
