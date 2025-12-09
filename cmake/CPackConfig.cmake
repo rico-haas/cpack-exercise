@@ -1,5 +1,7 @@
 set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
 set(CPACK_PACKAGE_VENDOR "Rico Haas")
+set(CPACK_PACKAGE_CONTACT "st155588@stud.uni-stuttgart.de")
+set(CPACK_PACKAGE_MAINTAINERS "Rico Haas ${CPACK_PACKAGE_CONTACT}")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "An exercise project for CPack"
 CACHE STRING "In this SSE exercise, we create tar.gz and deb packages using CPack")
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/Simulation-Software-Engineering/cpack-exercise-wt2526")
